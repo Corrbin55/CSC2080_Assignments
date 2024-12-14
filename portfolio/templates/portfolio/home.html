@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+</head>
+<body>
+    <h1>My Portfolio</h1>
+    <h2>Skills & Technologies</h2>
+    <ul>
+        {% for item in items %}
+            <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Generate Password</h2>
+    <form action="{% url 'generate_password' %}" method="get">
+        <button type="submit">Generate Password</button>
+    </form>
+</body>
+</html>
